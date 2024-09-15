@@ -36,3 +36,10 @@ class Поток implements Iterable<УчебнаяГруппа> {
         return "Поток с " + группы.size() + " группами: " + группы;
     }
 }
+
+class StreamComparator implements Comparator<Поток> {
+    @Override
+    public int compare(Поток поток1, Поток поток2) {
+        return Integer.compare(поток1.getГруппы().size(), поток2.getГруппы().size());
+    }
+}
