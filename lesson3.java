@@ -43,3 +43,9 @@ class StreamComparator implements Comparator<Поток> {
         return Integer.compare(поток1.getГруппы().size(), поток2.getГруппы().size());
     }
 }
+
+class ПотокСервис {
+    public void сортироватьПотоки(List<Поток> потоки) {
+        Collections.sort(потоки, new StreamComparator());
+    }
+}
