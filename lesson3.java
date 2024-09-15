@@ -14,3 +14,25 @@ class УчебнаяГруппа {
         return название;
     }
 }
+
+class Поток implements Iterable<УчебнаяГруппа> {
+    private List<УчебнаяГруппа> группы;
+
+    public Поток(List<УчебнаяГруппа> группы) {
+        this.группы = группы;
+    }
+
+    public List<УчебнаяГруппа> getГруппы() {
+        return группы;
+    }
+
+    @Override
+    public Iterator<УчебнаяГруппа> iterator() {
+        return группы.iterator();
+    }
+
+    @Override
+    public String toString() {
+        return "Поток с " + группы.size() + " группами: " + группы;
+    }
+}
